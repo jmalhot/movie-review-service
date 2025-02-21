@@ -16,7 +16,6 @@ A robust FastAPI-based microservice for managing movie reviews with automated se
 - [Logging](#logging)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -63,13 +62,13 @@ cd movie-review-service
 ### 2. Set Up Virtual Environment
 ```bash
 # Create virtual environment
-python -m venv druid_virtual_env
+python -m venv venv
 
 # Activate virtual environment
 # On Unix/macOS:
-source druid_virtual_env/bin/activate
+source venv/bin/activate
 # On Windows:
-.\druid_virtual_env\Scripts\activate
+.\venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
@@ -316,7 +315,3 @@ git checkout -b feature/your-feature-name
 - Use type hints
 - Write docstrings for functions
 - Keep functions focused and small
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
