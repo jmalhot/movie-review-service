@@ -230,7 +230,6 @@ The service uses the `distilbert-base-uncased-finetuned-sst-2-english` model for
 ### Model Fine-tuning
 
 A Python script and Jupyter notebook are provided in the `notebooks` directory for fine-tuning the sentiment analysis model:
-- Script: `notebooks/fine_tune_model.py`
 - Notebook: `notebooks/fine_tune_model.ipynb`
 
 The fine-tuning process includes:
@@ -248,13 +247,7 @@ The fine-tuning process includes:
 pip install transformers datasets torch numpy pandas sklearn tqdm
 ```
 
-2. Run using Python script:
-```bash
-cd notebooks
-python fine_tune_model.py
-```
-
-3. Or use Jupyter Notebook:
+2. Or use Jupyter Notebook:
 ```bash
 pip install jupyter
 jupyter notebook notebooks/fine_tune_model.ipynb
