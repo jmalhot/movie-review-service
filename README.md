@@ -227,6 +227,54 @@ The service uses the `distilbert-base-uncased-finetuned-sst-2-english` model for
 - Returns confidence scores for predictions
 - Is optimized for performance
 
+### Model Fine-tuning
+
+A Python script and Jupyter notebook are provided in the `notebooks` directory for fine-tuning the sentiment analysis model:
+- Script: `notebooks/fine_tune_model.py`
+- Notebook: `notebooks/fine_tune_model.ipynb`
+
+The fine-tuning process includes:
+- Loading and preprocessing the IMDB dataset (50K movie reviews)
+- Initializing a DistilBERT model for binary classification
+- Training with optimized hyperparameters
+- Evaluation using accuracy, precision, recall, and F1 score
+- Model testing with sample reviews
+- Saving the fine-tuned model for production use
+
+#### Running the Fine-tuning Process
+
+1. Install required packages:
+```bash
+pip install transformers datasets torch numpy pandas sklearn tqdm
+```
+
+2. Run using Python script:
+```bash
+cd notebooks
+python fine_tune_model.py
+```
+
+3. Or use Jupyter Notebook:
+```bash
+pip install jupyter
+jupyter notebook notebooks/fine_tune_model.ipynb
+```
+
+#### Fine-tuning Parameters
+- Learning rate: 2e-5
+- Batch size: 16
+- Training epochs: 3
+- Max sequence length: 512
+- Weight decay: 0.01
+- Evaluation strategy: Per epoch
+- Random seed: 42
+
+#### Model Output Directory
+The fine-tuned model will be saved to `models/fine_tuned_sentiment/`, which can then be used by updating the `MODEL_PATH` in your `.env` file:
+```env
+MODEL_PATH=./models/fine_tuned_sentiment
+```
+
 ### Example Sentiment Results
 ```json
 {
